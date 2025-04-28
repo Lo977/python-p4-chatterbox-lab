@@ -12,11 +12,11 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:4000/messages")
+    fetch("http://127.0.0.1:5555/messages")
       .then((r) => r.json())
       .then((messages) => setMessages(messages));
   }, []);
-
+  console.log(messages);
   function handleAddMessage(newMessage) {
     setMessages([...messages, newMessage]);
   }
